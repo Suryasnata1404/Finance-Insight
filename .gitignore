@@ -1,6 +1,6 @@
 # Ignore raw datasets
 data/raw/*
-!data/raw/.gitkeep
+!data/raw/**/.gitkeep
 
 # Ignore virtual environment
 venv/
