@@ -1,11 +1,4 @@
-"""
-FinanceInsight: Linguistic Feature Extraction
----------------------------------------------
-Stage 3 - Tokenization, POS Tagging, and Lemmatization
-
-This script processes cleaned financial text to extract linguistic features
-used for EDA, data cleaning, and NER model training.
-"""
+# Stage 3 - Tokenization, POS Tagging, and Lemmatization
 
 import os
 import json
@@ -14,15 +7,13 @@ import logging
 import pandas as pd
 from tqdm import tqdm
 
-# Paths
 INPUT_FILE = "data/processed/preprocessed_dataset.jsonl"
 OUTPUT_FILE = "data/processed/linguistic_features.jsonl"
 STATS_FILE = "data/processed/token_stats.csv"
 
-# Logging Setup 
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 
-# Load spaCy Model
+# spaCy Model
 try:
     nlp = spacy.load("en_core_web_sm", disable=["ner"])
 except OSError:
@@ -106,9 +97,9 @@ def process_dataset(input_path=INPUT_FILE, output_path=OUTPUT_FILE, stats_path=S
     )
     df_stats.to_csv(stats_path, index=False)
 
-    logging.info(f"✅ Completed! {total} records processed.")
-    logging.info(f"🗂️ Output saved to: {output_path}")
-    logging.info(f"📊 Token stats saved to: {stats_path}")
+    logging.info(f"Completed! {total} records processed.")
+    logging.info(f"Output saved to: {output_path}")
+    logging.info(f"Token stats saved to: {stats_path}")
 
 
 if __name__ == "__main__":
