@@ -1,7 +1,5 @@
 """
 Unify raw financial datasets (csv, json, txt, pdf, html) into one clean JSONL file.
-- Handles different file formats
-- Extracts text cleanly (PDFs via pdfplumber, JSONL, CSV, etc.)
 - Removes duplicates
 - Normalizes whitespace
 """
@@ -48,7 +46,7 @@ def normalize_text(text: str) -> str:
 
 def sha256_hash(text: str) -> str:
     """Short hash for deduplication."""
-    return hashlib.sha256(text[:500].encode("utf-8")).hexdigest()
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 # Extractors
