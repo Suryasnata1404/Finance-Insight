@@ -11,6 +11,11 @@ venv/
 # Ignore zip files
 *.zip
 
-# Ignore large files
-*.json
-*.csv
+# Ignore large raw data files but allow processed outputs
+data/raw/**/*.json
+data/raw/**/*.csv
+
+# Allow processed and script-related JSON/CSV files
+!data/processed/**/*.json
+!data/processed/**/*.jsonl
+!scripts/**/*.json
