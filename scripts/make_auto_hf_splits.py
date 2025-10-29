@@ -37,5 +37,6 @@ for name, data in [("train", train_records), ("validation", val_records), ("test
 with open(os.path.join(OUTDIR, "label_map.json"), "w") as f:
     json.dump({"label2id": label2id, "id2label": {v: k for k, v in label2id.items()}}, f, indent=2)
 
+
 print(f"[INFO] Train: {len(train_records)}, Val: {len(val_records)}, Test: {len(test_records)}")
 print("[INFO] Label map saved.")
