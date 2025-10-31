@@ -35,8 +35,13 @@ id2label = {int(k): v for k, v in label_info["id2label"].items()}
 # --- Load tokenizer and model ---
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForTokenClassification.from_pretrained(
-    MODEL_NAME, num_labels=len(label2id), id2label=id2label, label2id=label2id
+    MODEL_NAME,
+    num_labels=len(label2id),
+    id2label=id2label,
+    label2id=label2id,
+    ignore_mismatched_sizes=True  # 👈 resets classifier for NER
 ).to(device)
+
 
 # --- Tokenize and align labels ---
 def tokenize_and_align(batch):
@@ -72,7 +77,7 @@ def compute_metrics(eval_pred):
 # --- Training Arguments ---
 args = TrainingArguments(
     output_dir=OUTPUT_DIR,
-    eval_strategy="epoch",
+    evaluation_strategy="epoch",
     save_strategy="epoch",
     learning_rate=3e-5,
     per_device_train_batch_size=BATCH_SIZE,
