@@ -25,6 +25,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.title("📄 Financial Insight | Chat With Your Document")
 
+
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/000000/bank-building.png", width=55)
     st.markdown("> **Settings**", unsafe_allow_html=True)
