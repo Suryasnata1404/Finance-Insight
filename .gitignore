@@ -1,31 +1,66 @@
-# Ignore raw datasets
-data/raw/*
-!data/raw/**/.gitkeep
 
 # Ignore virtual environment
 venv/
+*.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
 
 # Ignore Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Ignore zip files
+#  Ignore raw datasets
+
+# Ignore ALL raw datasets except .gitkeep
+data/raw/*
+!data/raw/**/.gitkeep
+
+# Ignore processed datasets (default)
+data/processed/*
+
+# BUT keep the folder ner_auto_splits and everything inside it
+!data/processed/ner_auto_splits/
+!data/processed/ner_auto_splits/**
+
+# If you want to keep more processed files, add more whitelists here
+# Example:
+# !data/processed/token_stats.csv
+
+
+# Ignore ALL model checkpoints
+models/*
+models/**
+
+models/**
+
+# But keep ONLY the folder name (empty)
+!models/finbert_ner_weighted/
+!models/finbert_ner_weighted/.gitkeep
+
+
+
+# Ignore zip / heavy files
 *.zip
+*.gz
+*.tar
+*.rar
 
-# Ignore large raw data files but allow processed outputs
-data/raw/**/*.json
-data/raw/**/*.csv
+# Ignore OS & editor files
 
-# Allow processed and script-related JSON/CSV files
-!data/processed/**/*.json
-!data/processed/**/*.jsonl
+.DS_Store
+Thumbs.db
 
-# Ignore large raw data files but allow processed outputs
-data/raw/**/*.json
-data/raw/**/*.csv
+# Ignore Streamlit cache
+.streamlit/
 
-# Allow processed and script-related JSON/CSV files
-!data/processed/**/*.json
-!data/processed/**/*.jsonl
+# Ignore logs
+*.log
+
+# Keep scripts folder
+!scripts/
+!scripts/**
 
 # Legacy scripts (keep for reference)
 !scripts/legacy/
