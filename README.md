@@ -4,7 +4,7 @@
 ---
 
 
-![SCREENSHOT](<Screenshot 2025-11-20 181205.png>)
+![SCREENSHOT](<Assets/Screenshot 2025-11-20 181205.png>)
 
 
 This project demonstrates real-world NLP + ML engineering, enabling end-to-end financial document intelligence.
