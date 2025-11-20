@@ -109,26 +109,6 @@ Future extension:
 
 ---
 
-## 📊 **Model Training Summary**
-
-### **Dataset Size**
-- Train: **9284**
-- Validation: **1161**
-- Test: **1161**
-
-### **Training Performance**
-
-| Epoch | Train Loss | Val Loss | Precision | Recall | F1 | Accuracy |
-|------|------------|----------|-----------|--------|----|----------|
-| 1 | 0.2997 | 0.3997 | 0.4572 | 0.7670 | 0.5729 | 0.8469 |
-| 2 | 0.3082 | 0.4104 | 0.6152 | 0.8135 | 0.7006 | 0.9050 |
-| 3 | 0.2004 | 0.5172 | 0.6513 | 0.8077 | 0.7211 | 0.9127 |
-
-✔ High accuracy  
-✔ Strong recall on numeric financial entities  
-
----
-
 ## 📂 **Project Structure**
 ```
 Finance-Insight/
