@@ -140,15 +140,13 @@ Finance-Insight/
 │   │   ├── bio_auto_annotated.jsonl
 │   │   ├── linguistic_features.jsonl
 │   │   ├── merged_dataset.jsonl
-│   │   ├── ner_auto_splits.zip
 │   │   ├── preprocessed_dataset.jsonl
 │   │   └── token_stats.csv
 │   │
 │   └── raw/
 │       ├── filings/
 │       ├── news/
-│       ├── reports/
-│       └── .gitkeep
+│       └── reports/
 │
 ├── models/
 │   └── finbert_ner_weighted/
@@ -161,7 +159,6 @@ Finance-Insight/
 │   └── 04_segmentation_parsing.ipynb
 │
 ├── scripts/
-│   ├── legacy/
 │   ├── 1_prepare_dataset.py
 │   ├── 2_preprocess_pipeline.py
 │   ├── 3_tokenize_features.py
