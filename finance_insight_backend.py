@@ -1,4 +1,3 @@
-
 # finance_insight_backend.py
 # Minimal backend for Milestone 3: NER + Rules + Events + Yahoo verification
 
